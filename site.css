@@ -200,8 +200,8 @@ figcaption{margin-top:8px}
 .path{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:64px;align-items:start}
 .path .cv{order:-1}
 .path .story p+p{margin-top:16px}
-.path .story figure{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.path .story img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.path .story figure{margin-top:28px}
+.path .story img{width:100%;aspect-ratio:1/1;object-fit:cover}
 .path .story figcaption{grid-column:1/-1;margin-top:0}
 .cv{font-size:var(--f7);line-height:1.5;border-bottom:1px solid var(--rule)}
 .cv li{display:grid;grid-template-columns:92px minmax(0,1fr);gap:16px;padding:9px 0;border-top:1px solid var(--rule)}
@@ -338,7 +338,7 @@ figcaption{margin-top:8px}
   .fold:not([open]){border-bottom:1px solid var(--rule)}
   .cv li{grid-template-columns:84px minmax(0,1fr);gap:10px}
   .mos{gap:10px}
-  .mo{grid-column:span 12;min-height:240px}
+  .mo{grid-column:span 12;min-height:300px}
   .cards{grid-template-columns:1fr;gap:12px}
   .end{margin-top:68px;padding:60px 0}
   .page{padding-top:92px}
