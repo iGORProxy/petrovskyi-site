@@ -136,10 +136,24 @@ figcaption{margin-top:8px}
 .faq details[open] summary::after{content:"\2013"}
 .faq details p{padding:0 44px 18px 0;max-width:720px}
 
+/* перегляд зображення у повному розмірі */
+.lb{border:0;padding:0;background:none;max-width:none;max-height:none;width:100vw;height:100vh;height:100dvh;place-items:center;overflow:hidden}
+.lb[open]{display:grid}
+.lb::backdrop{background:rgba(9,20,48,.92)}
+.lb img{max-width:min(94vw,1200px);max-height:calc(100dvh - 96px);width:auto;height:auto;border-radius:4px;background:#fff}
+.lb p{position:fixed;left:0;right:0;bottom:12px;margin:0;padding:0 70px;text-align:center;color:#fff;font-size:var(--f7);white-space:pre-wrap}
+.lb button{position:fixed;width:48px;height:48px;border-radius:6px;border:2px solid #fff;background:rgba(14,31,71,.7);color:#fff;font:400 22px/1 system-ui,sans-serif;cursor:pointer}
+.lb button:hover{background:#fff;color:var(--navy)}
+.lb .x{top:14px;right:14px;font-size:28px}
+.lb .lp{left:14px;top:50%;margin-top:-24px}
+.lb .ln{right:14px;top:50%;margin-top:-24px}
+
 /* відгуки */
 .said .lead{margin-top:14px;color:var(--slate);max-width:620px}
-.revs .track figure{flex:none;width:min(440px,80vw);scroll-snap-align:start;margin:0}
-.revs .track img{border-radius:10px}
+.revs .track figure{flex:none;width:min(280px,70vw);scroll-snap-align:start;margin:0}
+.revs .track img{border-radius:8px}
+.track a[data-zoom]{display:block;cursor:zoom-in}
+.track a[data-zoom]:hover img{opacity:.88}
 .car{max-width:1280px;margin:0 auto}
 .revs{margin-top:36px}
 .ribbon{max-width:none;margin:36px 0 0}
@@ -161,9 +175,9 @@ figcaption{margin-top:8px}
 
 /* про мене */
 .about{padding-top:104px}
-.about .intro{background:var(--navy);color:#fff;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
-.about .intro img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;max-height:620px}
-.about .intro div{padding:64px;align-self:center;max-width:760px}
+.about .intro{background:var(--navy);color:#fff;display:grid;grid-template-columns:400px minmax(0,1fr);width:min(1000px,calc(100% - 80px));margin:0 auto}
+.about .intro img{width:100%;height:auto;display:block}
+.about .intro div{padding:56px;align-self:center}
 .about .intro h2{color:#fff}
 .about .intro p{margin-top:18px;color:rgba(255,255,255,.9)}
 .about .intro p.lede{margin-top:22px;color:#fff}
@@ -184,6 +198,7 @@ figcaption{margin-top:8px}
 .fold summary{list-style:none;pointer-events:none}
 .fold summary::-webkit-details-marker{display:none}
 .path{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:64px;align-items:start}
+.path .cv{order:-1}
 .path .story p+p{margin-top:16px}
 .path .story figure{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .path .story img{width:100%;aspect-ratio:4/3;object-fit:cover}
@@ -207,7 +222,10 @@ figcaption{margin-top:8px}
 .cd[hidden]{display:none}
 .cd:hover h4{text-decoration:underline;text-underline-offset:3px}
 .cd p{font-size:var(--f6);line-height:1.5;color:var(--slate);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.posts .tl{margin-top:20px}
+.all{margin-top:28px}
+.b-sm{padding:12px 20px;font-size:15px}
+.qa .faq{margin-top:0}
+.qa .faq details{border-color:var(--rule)}
 
 /* фінал і підвал */
 .end{margin-top:104px;background:var(--band);color:var(--band-fg);padding:88px 0}
@@ -271,7 +289,9 @@ figcaption{margin-top:8px}
   .asks,.fmts{grid-template-columns:1fr 1fr}
   .hero .txt{gap:26px}
   .sits li{gap:10px}
-  .about .intro img{max-height:480px}
+  .about .intro{width:auto}
+  .about .intro img{height:100%;max-height:480px;object-fit:cover;object-position:50% 20%}
+  .path .cv{order:0}
   .facts ul{grid-template-columns:1fr 1fr}
   .facts li:nth-child(3){padding-left:0;border-left:0}
   .facts li:nth-child(n+3){border-top:1px solid var(--rule)}
