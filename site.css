@@ -59,7 +59,8 @@ section{scroll-margin-top:70px}
 .hero .where{font:600 16px/1.35 var(--u);color:var(--sky)}
 .hero .lede{font-size:clamp(21px,1.8vw,27px);line-height:1.34;max-width:540px;margin-top:14px}
 .hero .txt{gap:30px}
-.hero .go .btn{padding:17px 16px;font-size:15.5px}
+.hero .go .btn{padding:17px 15px;font-size:15.5px}
+.hero .go{padding-right:0}
 @media (min-width:1001px) and (max-height:780px){.hero .txt{padding-top:92px;padding-bottom:34px;gap:24px}.hero h1{font-size:min(15.2vw,24vh)}}
 .hero figure::before{content:"";position:absolute;inset:0 0 auto 0;height:200px;z-index:1;background:linear-gradient(180deg,rgba(14,31,71,.88) 0,rgba(14,31,71,.8) 76px,rgba(14,31,71,0) 100%)}
 .hero .go{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px;padding-right:24px}
