@@ -191,7 +191,7 @@ figcaption{margin-top:8px}
 .mo h4{color:inherit;margin-bottom:6px}
 .mo p{font-size:var(--f6);line-height:1.45;max-width:440px}
 .mo a{font:600 var(--f6)/1 var(--u);display:inline-block;padding:14px 0;text-underline-offset:4px}
-.m1{grid-column:span 4;grid-row:span 2;min-height:598px}.m2,.m3,.m5,.m6,.m8{grid-column:span 4}.m4{grid-column:span 8}
+.mo{grid-column:span 4}
 .mo.light{background:var(--ice);color:var(--navy);display:flex;flex-direction:column}.mo.light::after{display:none}
 .mo.light img{position:static;height:150px;object-fit:contain;padding:22px 22px 0}
 .mo.light div{position:static;margin-top:auto}
@@ -295,7 +295,7 @@ figcaption{margin-top:8px}
   .facts ul{grid-template-columns:1fr 1fr}
   .facts li:nth-child(3){padding-left:0;border-left:0}
   .facts li:nth-child(n+3){border-top:1px solid var(--rule)}
-  .m1,.m2,.m3,.m4,.m5,.m6,.m8{grid-column:span 6;grid-row:auto;min-height:340px}
+  .mo{grid-column:span 6;min-height:340px}
   .cards{grid-template-columns:1fr 1fr}
 }
 @media (max-width:640px){
@@ -338,7 +338,7 @@ figcaption{margin-top:8px}
   .fold:not([open]){border-bottom:1px solid var(--rule)}
   .cv li{grid-template-columns:84px minmax(0,1fr);gap:10px}
   .mos{gap:10px}
-  .m1,.m2,.m3,.m4,.m5,.m6,.m8{grid-column:span 12;min-height:240px}
+  .mo{grid-column:span 12;min-height:240px}
   .cards{grid-template-columns:1fr;gap:12px}
   .end{margin-top:68px;padding:60px 0}
   .page{padding-top:92px}
