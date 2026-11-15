@@ -425,4 +425,13 @@ figcaption{margin-top:8px}
   .mos-pos{display:block;margin-top:10px;font-size:var(--f7);color:var(--slate)}
   .fold .cvfold summary{display:block;text-align:center}
 }
+/* Пакет 4а: рубрика і рік як випадні меню */
+.sorts{display:flex;flex-wrap:wrap;gap:16px;margin:28px 0 30px}
+.sort{display:flex;flex-direction:column;gap:8px;font:600 var(--f7)/1 var(--u);color:var(--slate)}
+.sort select{appearance:none;-webkit-appearance:none;font:600 var(--f6)/1.2 var(--u);color:var(--navy);background:var(--ice) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%230E1F47' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 18px center/14px 9px;border:0;border-radius:14px;padding:14px 48px 14px 18px;min-height:50px;max-width:100%;cursor:pointer;text-overflow:ellipsis}
+.sort.r select{min-width:380px}
+.sort.y select{min-width:200px}
+.sort select:hover{background-color:#DFE8FF}
+.sort select:focus-visible{outline:2px solid var(--navy);outline-offset:2px}
+@media (max-width:640px){.sorts{gap:12px;margin:22px 0 24px}.sort{width:100%}.sort.r select,.sort.y select{width:100%;min-width:0}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
