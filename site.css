@@ -348,4 +348,39 @@ figcaption{margin-top:8px}
   .sign img{width:56px;height:56px}
   .sign .btn{grid-column:1/-1;justify-self:start}
 }
+/* Пакет 2: перший екран, формати, нижнє мобільне меню */
+.hero h1 .sub{display:block;font-family:var(--u);letter-spacing:0;max-width:520px;margin-left:calc(var(--f1)*.03)}
+.top.home:not(.solid) .me{visibility:hidden}
+.hero .how{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:520px;margin-top:26px}
+.hero .how li{border:1px solid rgba(255,255,255,.34);border-radius:6px;padding:12px 14px;font-size:var(--f7);line-height:1.35;color:rgba(255,255,255,.86)}
+.hero .how b{display:block;font:700 var(--f6)/1.2 var(--u);color:#fff;margin-bottom:3px}
+.hero .go{margin-top:14px}
+.ways{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:56px}
+.ways article{background:#fff;border-radius:10px;padding:26px 26px 28px;border-top:4px solid var(--navy)}
+.ways h3{margin-bottom:8px}
+.tabs{display:none}
+@media (max-width:640px){
+  .hero .how{margin-top:0}
+  .hero .act{display:flex;flex-direction:column;gap:14px}
+  .hero .act .lede{order:3;margin-top:10px;font-size:18px}
+  .hero .go{margin-top:0}
+  .hero .go .b-line{display:none}
+  .hero h1 .sub{font-size:17px;margin-top:12px}
+  .ways{grid-template-columns:1fr;gap:14px;margin-top:36px}
+  .top .menu,.top .cta,.top.solid .cta{display:none}
+  .tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px;position:fixed;inset:auto 0 0 0;z-index:55;background:#fff;border-top:1px solid var(--rule);padding:6px 6px calc(6px + env(safe-area-inset-bottom));box-shadow:0 -6px 18px rgba(14,31,71,.08)}
+  .tabs a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:50px;font:600 11px/1.1 var(--u);color:var(--slate);text-decoration:none;border-radius:8px;-webkit-tap-highlight-color:transparent}
+  .tabs a:active{background:var(--ice)}
+  .tabs svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .tabs a[aria-current]{color:var(--navy);background:var(--ice)}
+  .tabs .write{background:var(--btn);color:#fff}
+  .tabs .write:active{background:var(--btn-h)}
+  .foot{padding-bottom:calc(30px + 64px + env(safe-area-inset-bottom))}
+}
+
+@media (max-width:640px){
+  :root{--f1:13.2vw}
+  .hero figure{aspect-ratio:16/10;margin-top:0}
+  .hero .txt{gap:18px;padding:20px 18px 34px}
+}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}

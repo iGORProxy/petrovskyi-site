@@ -12,6 +12,7 @@
     gtag('config', GA_ID);
   }
   function place(el) {
+    if (el.closest('.tabs')) return 'tabbar';
     if (el.closest('header')) return 'header';
     if (el.closest('.hero')) return 'hero';
     if (el.closest('#yak')) return 'formats';
@@ -32,4 +33,21 @@
       page_type: location.pathname.indexOf('/blog/') === 0 ? 'blog' : 'home'
     });
   }, true);
+})();
+
+/* Нижнє мобільне меню: підсвітка активного розділу на головній. */
+(function () {
+  var tabs = document.querySelectorAll('.tabs a[data-tab]');
+  if (!tabs.length || !('IntersectionObserver' in window)) return;
+  var map = {};
+  tabs.forEach(function (a) { var s = document.getElementById(a.getAttribute('data-tab')); if (s) map[s.id] = a; });
+  var seen = {};
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { seen[e.target.id] = e.isIntersecting; });
+    var cur = null;
+    Object.keys(map).forEach(function (id) { if (seen[id] && !cur) cur = id; });
+    tabs.forEach(function (a) { a.removeAttribute('aria-current'); });
+    if (cur) map[cur].setAttribute('aria-current', 'true');
+  }, { rootMargin: '-45% 0px -45% 0px' });
+  Object.keys(map).forEach(function (id) { io.observe(document.getElementById(id)); });
 })();
