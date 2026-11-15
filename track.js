@@ -25,12 +25,12 @@
     var a = e.target.closest && e.target.closest('a[href]');
     if (!a) return;
     var href = a.getAttribute('href');
-    var channel = href.indexOf('t.me/ihor_petrovskyi') > -1 ? 'telegram' : href.indexOf('tel:') === 0 ? 'phone' : '';
+    var channel = href.indexOf('t.me/ihor_petrovskyi') > -1 ? 'telegram' : href.indexOf('wa.me/') > -1 ? 'whatsapp' : href.indexOf('tel:') === 0 ? 'phone' : '';
     if (!channel) return;
     gtag('event', 'contact_click', {
       channel: channel,
       place: place(a),
-      page_type: location.pathname.indexOf('/blog/') === 0 ? 'blog' : 'home'
+      page_type: location.pathname.indexOf('/blog/') === 0 ? 'blog' : location.pathname.indexOf('/online') === 0 ? 'online' : 'home'
     });
   }, true);
 })();
