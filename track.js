@@ -51,3 +51,17 @@
   }, { rootMargin: '-45% 0px -45% 0px' });
   Object.keys(map).forEach(function (id) { io.observe(document.getElementById(id)); });
 })();
+
+/* Лічильник каруселі «Чим я займаюся сьогодні» на телефоні. */
+(function () {
+  var m = document.querySelector('.mos'), o = document.querySelector('.mos-pos');
+  if (!m || !o) return;
+  var f = m.children;
+  function upd() {
+    var x = m.scrollLeft, b = 0, d = 1e9;
+    for (var i = 0; i < f.length; i++) { var q = Math.abs(f[i].offsetLeft - f[0].offsetLeft - x); if (q < d) { d = q; b = i; } }
+    o.textContent = (b + 1) + ' / ' + f.length;
+  }
+  m.addEventListener('scroll', upd, { passive: true });
+  upd();
+})();
