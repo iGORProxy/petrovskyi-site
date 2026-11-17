@@ -175,7 +175,7 @@ figcaption{margin-top:8px}
 
 /* про мене */
 .about{padding-top:104px}
-.about .intro{background:var(--navy);color:#fff;display:grid;grid-template-columns:400px minmax(0,1fr);width:min(1000px,calc(100% - 80px));margin:0 auto}
+.about .intro{background:var(--navy);color:#fff;display:grid;grid-template-columns:400px minmax(0,1fr);width:min(1200px,calc(100% - 80px));margin:0 auto}
 .about .intro img{width:100%;height:auto;display:block}
 .about .intro div{padding:56px;align-self:center}
 .about .intro h2{color:#fff}
@@ -435,3 +435,10 @@ figcaption{margin-top:8px}
 .sort select:focus-visible{outline:2px solid var(--navy);outline-offset:2px}
 @media (max-width:640px){.sorts{gap:12px;margin:22px 0 24px}.sort{width:100%}.sort.r select,.sort.y select{width:100%;min-width:0}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+/* 17.11.2026: розташування тексту на головній */
+.nw{white-space:nowrap}
+@media (min-width:641px){
+  .mo:not(.light){display:flex;flex-direction:column}
+  .mo:not(.light) div{position:relative;flex:1;display:flex;flex-direction:column;margin-top:130px}
+  .mo:not(.light) div a{margin-top:auto;align-self:flex-start}
+}
